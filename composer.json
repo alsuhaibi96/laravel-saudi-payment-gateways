@@ -1,0 +1,50 @@
+{
+    "name": "alsuhaibi96/laravel-saudi-payment-gateways",
+    "description": "Strategy + Factory payment gateways for Saudi Arabia (Moyasar, PayTabs, Tabby, Tamara, MISpay) with database-driven payment methods and idempotent, signed webhooks.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "payments", "saudi-arabia", "moyasar", "paytabs", "tabby", "tamara", "mispay", "bnpl"],
+    "homepage": "https://github.com/alsuhaibi96/laravel-saudi-payment-gateways",
+    "authors": [
+        {
+            "name": "Abdulrahman Alsuhaibi",
+            "homepage": "https://alsuhaibi96.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alsuhaibi\\SaudiPayments\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alsuhaibi\\SaudiPayments\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alsuhaibi\\SaudiPayments\\SaudiPaymentsServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
